@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>checked demo</title>
+  
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+<input type="text" id="cat-filter">
+ <ul class="base-ul">
+<li>first</li>
+<li>second</li>
+<li>third</li>
+<li>forth</li>
+</ul>
+<hr/>
+<button class="btn">Run</button>
+<p id='p'>yes</p>
+</div>
+ 
+<script>
+$(document).on('keyup','#cat-filter',function(){
+let searchKey=$(this).val().toLowerCase();
+console.log(searchKey);
+$('.base-ul li').filter(function(){
+$(this).toggle($(this).text().toLowerCase().indexOf(searchKey)>-1);
+
+});
+});
+$(document).on('click','.btn',function(){
+
+});
+var m=[1,2,68,0,9];
+console.log(m);
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html test</title>
+    <script>
+        function show(){
+            document.getElementsByTagName("h1")[0].innerHTML="ewfrwegr";
+            document.parentNode.removeChild(document.getElementsByTagName("h5")[0]);
+       }
+        function showDetails(person){
+            var family=person.getAttribute("data-family");
+            var age=person.getAttribute("data-age");
+            var nameElement=document.getElementsByTagName("h1")[0];
+            nameElement.innerHTML=family;
+            var ageElement=document.getElementsByTagName("h5")[0];           
+            ageElement.innerHTML=age;
+           
+            console.log(nameElement.innerHTML);
+        }
+    </script>
+</head>
+<body>
+    <h1>اسم</h1>
+    <h5>فامیل</h5>
+    <ul>
+        <li onclick="showDetails(this)" data-family="jahanpoor" data-age="25">Moslem</li>
+        <li onclick="showDetails(this)" data-family="jhnpr" data-age="1.5">Mohammad</li>
+    </ul>
+    <button onclick="show()">yes</button>
+</body>
+</html>
